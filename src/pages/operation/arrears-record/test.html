@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Title</title>
+  <script>
+    // function createFunctions() {
+    //   var result = new Array();
+    //   for (var i = 0; i < 10; i++) {
+    //     result[i] = function (num) {
+    //       return function () {
+    //         return num;
+    //       };
+    //     }(i);
+    //   }
+    //   return result
+    // }
+    // temp = createFunctions();
+    // console.log(temp);
+    // console.log(temp[2]())
+    // var name = 'The Window';
+    // var object = {
+    //   name: 'my object',
+    //   getNameFunc: function () {
+    //     var that = this;
+    //     return function () {
+    //       return that.name;
+    //     };
+    //   }
+    // };
+    // var result = []
+    // result[0] = object.getNameFunc()
+    // console.log(result);
+    // window.moveTo(200,200)
+    // alert("Hello world!");
+    // if(confirm("are you sad?")) {
+    //   alert("i am sad");
+    // } else {
+    //   alert('i am happy')
+    // }
+    // result = prompt("请输入名字", '时祺科技')
+    // if( result!== null) {
+    //   alert('welcome ' + result)
+    // }
+    // console.log('location.hash',location.hash);
+    // console.log('location.host',location.host);
+    // console.log('location.hostname',location.hostname);
+    // console.log('location.port',location.port);
+    // console.log('location.pathname',location.pathname);
+    // console.log('location.protocol',location.protocol);
+    // console.log('location.search',location.search);
+    // console.log('1-window:  ',this);
+    // function Queen() {
+    //   console.log('4-Queen:  ',this);
+    //   setTimeout(function () {console.log('5-: Queen: ', this)}, 1000)
+    // }
+    // function King() {
+    //   console.log('2-King:  ',this);
+    //   setTimeout(() => console.log('3-King: ', this), 1000)
+    //   new Queen();
+    // }
+    // new King();
+    // new Queen();
+
+    // let p = new Promise(() => {});
+    // setTimeout(console.log, 0, p);
+    // let p1 = new Promise((resolve,reject) => resolve() );
+    // setTimeout(console.log, 0, p1);
+    // let p2 = new Promise((resolve,reject) => reject() );
+    // setTimeout(console.log, 0, p2);
+    //
+    // new Promise(() => setTimeout(console.log, 0, 'executor'));
+    // setTimeout(console.log, 0, 'promise initialized');
+    //
+    // let p = new Promise((resolve, reject) => setTimeout(resolve, 1000))
+    // setTimeout(console.log, 500, p)
+
+    // setTimeout(console.log, 0, Promise.resolve());
+    // setTimeout(console.log, 0, Promise.resolve(3));
+    //
+    // window.moveTo(500, 500);
+
+    // let wroxWin = window.open("www.baidu.com",'wroxWindow',
+    //                           'height=400,width=400,top=10,left=10,resizable=yes');
+    // wroxWin.resizeTo(200,200);
+    // wroxWin.moveTo(100,100);
+    // console.log(parseInt('30px',2));
+
+
+
+
+  </script>
+</head>
+<!--<frameset>-->
+<!--  <frame name="topFrame">-->
+<!--  <frameset cols="50%,50%">-->
+<!--    <frame name="leftFrame">-->
+<!--    <frame name="rightFrame">-->
+<!--  </frameset>-->
+<!--</frameset>-->
+<body>
+<!--  <div style="width: 400px">-->
+<!--    <div style="width: 10px; height: 20px; background-color: chartreuse" id="status">-->
+
+<!--    </div>-->
+<!--&lt;!&ndash;    <canvas id="drawing" width="600" height="600">A drawing of something</canvas>&ndash;&gt;-->
+
+<!--    <form>-->
+<!--      <input type="text" name="test">-->
+<!--      <input type="text" name="test2">-->
+<!--      <select name="sel">-->
+<!--        <option value="op1">op1</option>-->
+<!--        <option value="op2">op2</option>-->
+<!--        <option value="op3">op3</option>-->
+<!--      </select>-->
+<!--      <label><input type="radio" name="rad" value="rad1">rad1</label>-->
+<!--      <label><input type="radio" name="rad" value="rad1">rad2</label>-->
+<!--      <label><input type="radio" name="rad" value="rad1">rad3</label>-->
+
+<!--      <button type="submit">提交</button>-->
+<!--    </form>-->
+<!--    <img src="test.webp">-->
+<!--  </div>-->
+<!--    <iframe name="richedit" style=" width: 100px; height: 100px"></iframe>-->
+    <div class="editable" id="richedit" contenteditable="true">哈哈</div>
+    <input type="file">
+    <button id="but1">提交文件</button>
+
+    <img>
+
+
+
+  <script>
+
+    async function test() {
+      // return 3;
+      console.log(1)
+      // return Promise.resolve(3);
+      console.log(await Promise.resolve(3));
+      console.log(await 4);
+
+      console.log(await new Promise(((resolve, reject) => setTimeout(resolve, 1000, 5))));
+      console.log(6)
+
+    }
+    test();
+    // console.log(test());
+    // console.log(Promise.resolve(3));
+    console.log(2);
+    // let str = 'abc';
+    // let arr = ['a', 'b', 'c'];
+    // let map = new Map().set('a', 1).set('b', 2).set('c', 3);
+    // let set = new Set().add('a').add('b').add('c');
+    // let els = document.querySelectorAll('div');
+    //
+    // console.log(str[Symbol.iterator]);
+    // console.log(arr[Symbol.iterator]);
+    // console.log(map[Symbol.iterator]);
+    // console.log(set[Symbol.iterator]);
+    // console.log(els[Symbol.iterator]);
+    //
+    // console.log(str[Symbol.iterator]());
+    // console.log(arr[Symbol.iterator]());
+    // console.log(map[Symbol.iterator]());
+    // console.log(set[Symbol.iterator]());
+    // console.log(els[Symbol.iterator]());
+    //
+    // let iter = str[Symbol.iterator]();
+    // console.log(iter.next());
+    // console.log(iter.next());
+    // console.log(iter.next());
+    // function * gen() {
+    //   yield 'a';
+    //   yield 'b';
+    //   yield 'c';
+    // }
+    // let genObj = gen();
+    // console.log(genObj.next('aa'));
+    // console.log(genObj.next('bb'));
+    // console.log(genObj.next('cc'));
+    // console.log(genObj.next('dd'));
+
+    // let str = 'abcdef';
+    // let iter = str[Symbol.iterator]();
+    // iter.return = function () {
+    //   console.log("exit early");
+    //   return {done: true, value : 'exit early2'}
+    // }
+    // for (let i of iter) {
+    //   console.log(i);
+    //   if (i == 'c') {
+    //     break;
+    //   }
+    // }
+    // console.log("---------")
+    // for (let i of iter) {
+    //   console.log(i);
+    // }
+    // console.log(str[Symbol.iterator]());
+    // const  imageElement = document.querySelector('img');
+    // fetch('test.webp')
+    // .then(res => res.blob())
+    // .then(blob => {
+    //   imageElement.src = URL.createObjectURL(blob);
+    // })
+
+    // let but1 = document.getElementById('but1');
+    // but1.addEventListener('click', event => {
+    //   let imageFormData = new FormData();
+    //   let imageInput = document.querySelector("input[type='file']");
+    //   // imageFormData.append('image', imageInput.files[0]);
+    //   imageFormData.append('image', 'test');
+    //   fetch('https://4d339cd9-bcf4-4795-8bc9-f6ff77e2122d.mock.pstmn.io', {
+    //     method: 'post',
+    //     body: imageFormData,
+    //     headers: {
+    //       // 'Content-Type': 'application/json'
+    //       // 'Content-Type': 'application/x-www-form-urlencoded; charset=UTF-8'
+    //     }
+    //   }).then(res => {
+    //     res.text().then(data => console.log(data));
+    //   });
+    // })
+
+
+    // let payload = 'foo=bar&baz=qux';
+    // let paramHeaders = new Headers({
+    //   'Content-Type': 'application/x-www-form-urlencoded; charset=UTF-8'
+    // })
+    // fetch('https://4d339cd9-bcf4-4795-8bc9-f6ff77e2122d.mock.pstmn.io', {
+    //   method: 'post',
+    //   body: payload,
+    //   headers: paramHeaders
+    // }).then(res => {
+    //   res.text().then(data => console.log(data));
+    // });
+    // let payload = JSON.stringify({
+    //   foo: 'bar'
+    // });
+    // let jsonHeader = new Headers({
+    //   'Content-Type': 'application/json'
+    // })
+    // fetch('https://4d339cd9-bcf4-4795-8bc9-f6ff77e2122d.mock.pstmn.io', {
+    //   method: 'post',
+    //   body: payload,
+    //   headers: jsonHeader
+    // }).then(res => {
+    //   res.text().then(data => console.log(data));
+    // });
+    // fetch('test.webp').then(res => console.log(res.data));
+    // window.addEventListener('load', () => {
+    //   frames['richedit'].document.designMode = 'on';
+    // })
+    // function updateProgess() {
+    //   var div = document.getElementById('status');
+    //   // console.log(div);
+    //   div.style.width = (parseInt(div.style.width, 10)+ 5) + '%';
+    //   console.log(div.style.width)
+    //   if (div.style.width != '100%') {
+    //     requestAnimationFrame(updateProgess);
+    //   }
+    // }
+    // requestAnimationFrame(updateProgess);
+
+    // let drawing = document.getElementById('drawing');
+    // if (drawing.getContext) {
+    //
+    //   let context = drawing.getContext('2d');
+
+      // context.fillStyle = "#ff0000";
+      // context.fillRect(10, 10, 50, 50);
+      // context.fillStyle = "rgba(0, 0, 255, 0.5)";
+      // context.fillRect(30, 30, 50, 50)
+      // context.strokeStyle = "#00ff00";
+      // context.strokeRect(10, 10, 50, 50);
+      // context.strokeStyle = "rgba(0, 255, 0, 0.5)";
+      // context.strokeRect(30, 30, 50, 50)
+      // context.clearRect(40, 40, 10, 10);
+      //
+      // context.beginPath();
+      // context.arc(100, 100, 99, 0, 2 * Math.PI, false);
+      // context.moveTo(194, 100);
+      // context.arc(100, 100, 94, 0, 2* Math.PI, false);
+      // context.moveTo(100, 100);
+      // context.lineTo(100, 15);
+      // context.moveTo(100, 100);
+      // context.lineTo(35, 100);
+      //
+      // context.stroke();
+      //
+      // let gradient = context.createLinearGradient(30, 30, 70, 70);
+      // gradient.addColorStop(0, 'white');
+      // gradient.addColorStop(1, 'black');
+      // context.fillStyle = gradient;
+      // context.fillRect(10, 10, 50, 50)
+      //
+      // let imgURL = drawing.toDataURL('png');
+      //
+      // let image = document.createElement('img');
+      // image.src = imgURL;
+      // document.body.appendChild(image);
+      // let context = drawing.getContext('2d');
+    // }
+
+    // window.onload = function () {
+    //   requestAnimationFrame(updateProgess);
+    // }
+  </script>
+</body>
+</html>

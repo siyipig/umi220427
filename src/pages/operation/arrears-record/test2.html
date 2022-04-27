@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Title</title>
+  <script>
+
+
+  </script>
+</head>
+
+<body>
+ <h2 id="hex">16进制</h2>
+ <h2 id="dec">10进制</h2>
+ 初始值10进制：<input type="text" id="input1" name="inputHex">
+ <button id="but1">+</button>
+ <hr>
+
+ <button id="but2">-</button>
+
+  <script>
+    let count = 0;
+    elementInput1 = document.getElementById('input1');
+    elementHex = document.getElementById('hex');
+    elementDec = document.getElementById('dec');
+    elementBut1 = document.getElementById('but1');
+    elementBut2 = document.getElementById('but2');
+    elementInput1.addEventListener('change',(event) => {
+      count = event.target.value*1;
+      elementDec.innerText = '10进制:   ' + count;
+      elementHex.innerText = '16进制:   ' + count.toString(16) ;
+      // count = ('0x' + event.target.value)*1;
+        // elementDec.innerText = '10进制:   ' + (( '0x' + event.target.value )*1);
+        // elementHex.innerText = '16进制:   ' +  '0x' + event.target.value ;
+    })
+    elementBut1.addEventListener('click', (event) => {
+       count++;
+       console.log(count);
+      elementDec.innerText = '10进制:   ' + count;
+      elementHex.innerText = '16进制:   ' + count.toString(16) ;
+    })
+    elementBut2.addEventListener('click', (event) => {
+      count--;
+      console.log(count);
+      elementDec.innerText = '10进制:   ' + count;
+      elementHex.innerText = '16进制:   ' + count.toString(16) ;
+    })
+
+  </script>
+</body>
+</html>
